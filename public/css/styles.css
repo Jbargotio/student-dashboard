@@ -1,7 +1,7 @@
 /* General styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(90deg, #23434f 0%, #7dbb94 100%); /* Gradient background */
+    background: linear-gradient(90deg, #0f5132 0%, #3e8e53 100%); /* Graded green background */
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,25 +9,25 @@ body {
 
 /* Navbar styles */
 .navbar {
-    background-color: #0c2233; /* Dark navy-blue navbar */
-    padding: 10px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: transparent; /* Transparent navbar to blend with the background */
+    padding: 20px;
+    box-shadow: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Center the dashboard name */
+    position: relative;
 }
 
 .navbar .navbar-brand {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
 .navbar-buttons {
     position: absolute;
     right: 20px;
+    top: 20px;
 }
 
 .navbar-buttons .btn {
@@ -114,6 +114,6 @@ canvas {
     }
 
     .navbar .navbar-brand {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 }
