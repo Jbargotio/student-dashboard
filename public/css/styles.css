@@ -1,63 +1,96 @@
 /* General styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(90deg, #23434f 0%, #7dbb94 100%); /* Gradient background */
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 /* Navbar styles */
 .navbar {
-    margin-bottom: 20px;
+    background-color: #0c2233; /* Dark navy-blue navbar */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Title styles */
-h2 {
-    color: #333;
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 1.8rem;
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-buttons {
+    position: absolute;
+    right: 20px;
+}
+
+.navbar-buttons .btn {
+    color: #fff;
+    background-color: #28a745; /* Green sign-up button */
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.navbar-buttons .btn-secondary {
+    background-color: #6c757d; /* Gray for log in */
 }
 
 /* Container styles */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 30px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-/* Form styles */
-.form-label {
+/* Heading */
+h3 {
+    font-size: 1.3rem;
     font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
 }
 
-.form-control {
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-}
-
-button {
-    font-weight: bold;
-}
-
-/* Chart styles */
+/* Chart container */
 .chart-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    padding: 20px 0;
 }
 
 .chart-container > div {
     flex: 1;
+    max-width: 300px; /* Smaller chart container size */
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
 
 canvas {
-    max-width: 100%;
-    margin-bottom: 20px;
+    width: 100% !important;
+    height: 150px !important; /* Smaller chart height */
+}
+
+/* Buttons hover effect */
+.navbar-buttons .btn:hover {
+    background-color: #218838;
+}
+
+.navbar-buttons .btn-secondary:hover {
+    background-color: #5a6268;
 }
 
 /* Responsive design */
@@ -66,15 +99,21 @@ canvas {
         padding: 15px;
     }
 
-    h2 {
-        font-size: 1.5rem;
-    }
-
     .chart-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .chart-container > div {
+        max-width: 100%;
         margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 1.5rem;
     }
 }
